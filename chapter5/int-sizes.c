@@ -4,40 +4,38 @@
 
 int main(void)
 {
-	int n1, n2, n3, n4, largest, smallest;
+	int n1, n2, n3, n4, s1, l1, s2, l2, largest, smallest;
 	
 	printf("Enter for integers: ");
 	scanf("%d %d %d %d", &n1, &n2, &n3, &n4);
 	
 	if (n1 > n2) {
-		largest = n1;
-		smallest = n2;
+		l1 = n1;
+		s1 = n2;
 	} else {
-		largest = n2;
-		smallest = n1;
+		l1 = n2;
+		s1 = n1;
 	}
 	
-	if (n3 > n4 && n3 > largest)
-	// n3 is larger than n4 and largest
-	{
-		largest = n3;
-		
-	} 
-
-	if (n4 < smallest && largest < n4) 
-	{
-		smallest = n4;
+	if (n3 > n4) {
+		l2 = n3;
+		s2 = n4;
 	} else {
-	// largest is smaller than n4 
-	// means n4 is the largest
-		largest = n4;
-	} 
-	
-	if (n3 < smallest) 
-	// n3 is the smallest and n4 is not the smallest
+		l2 = n4;
+		s2 = n3;
+	}
+
+	if (l1 > l2) {
+		largest = l1;
+	} else {
+		largest = l2;
+	}
+
+	if (s1 < s2)
 	{
-		smallest = n3;
-	
+		smallest = s1;
+	} else {
+		smallest = s2;
 	}
 
 	printf("Largest: %d\n", largest);
