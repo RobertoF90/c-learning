@@ -26,14 +26,6 @@ int main(void)
 	
 	}
 
-
-
-//	while (ch != 0 && ch != ' ') {
-//		s = ch;
-//
-//		printf("surname taken\n");
-//	}
-
 	ch = getchar();
 
 	while (ch != '\n') {		
